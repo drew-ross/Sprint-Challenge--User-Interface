@@ -212,7 +212,7 @@ footer nav a {
 @media (max-width: 500px) {
     
     #lambdaImg {
-        margin-bottom: 50px;
+        margin-bottom: 20px;
     }
     
     .navTop {
@@ -224,22 +224,13 @@ footer nav a {
         flex-direction: column;
     }
 
-    .jumboImg {
-        width: 100%;
-        overflow: hidden;
-        /* Img height + extra margin due to position absolute */
-        margin-bottom: 183px; 
+    .navTop li {
+        text-align: center;
+        margin: 5px 0;
     }
 
-    .jumboImg img {
-        max-width: none;
-        height: 153px;
-        width: 800px;
-        position: absolute;
-        left: 50%;
-        /* Half image width */
-        margin-left: -400px;
-        overflow: hidden;
+    .navTop a {
+        font-size: 1.1rem;
     }
 
     .container {
@@ -265,6 +256,14 @@ footer nav a {
         margin: 0;
         box-sizing: content-box;
         padding: 40px;
+    }
+
+    footer nav {
+        flex-direction: column;
+    }
+
+    footer nav a {
+        margin: 10px 0;
     }
 }
 /* Box Colors */
