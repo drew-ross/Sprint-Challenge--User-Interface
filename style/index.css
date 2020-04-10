@@ -21,7 +21,8 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 62.5%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    max-width: 100%;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -29,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+    line-height: 1;
 }
 ol, ul {
 	list-style: none;
@@ -47,6 +48,8 @@ table {
 	border-spacing: 0;
 }
 
+/* General Styles */
+
 * {
     box-sizing: border-box;
 }
@@ -62,12 +65,40 @@ h1, h2, h3, h4, h5 {
     font-family: 'Rubik', sans-serif;
 }
 
+h2 {
+    font-size: 1.3rem;
+}
+
 p {
     line-height: 1.4;
 }
 
+a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+/* Page Styles */
+
+.navTop {
+    margin: 30px 0 40px 0;
+    display: flex;
+    align-items: flex-end;
+}
+
+.navTop ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 1;
+}
+
+.jumboImg {
+    margin: 30px 0;
+}
+
 .container {
-    width: 800px;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -99,10 +130,12 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: flex-start;
 }
 
 .middle-content .boxes .box {
     width: 12.5%;
+    min-width: 100px;
     height: 100px;
     background: black;
     margin: 20px 2.5%;
@@ -143,4 +176,135 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+/* Media Queries */
+
+@media (max-width: 800px) {
+        
+    .container {
+        width: 90%;
+    }
+    
+    .top-content, .bottom-content {
+        flex-direction: column;
+    }
+    
+    .top-content .text-container {
+        width: 100%;
+    }
+
+    .bottom-content .text-container {
+        margin-bottom: 20px;
+    }
+
+    .bottom-content .text-container h2 {
+        margin-bottom: 10px;
+    }
+
+    footer nav {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+}
+
+@media (max-width: 500px) {
+    
+    #lambdaImg {
+        margin-bottom: 50px;
+    }
+    
+    .navTop {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navTop ul {
+        flex-direction: column;
+    }
+
+    .jumboImg {
+        width: 100%;
+        overflow: hidden;
+        /* Img height + extra margin due to position absolute */
+        margin-bottom: 183px; 
+    }
+
+    .jumboImg img {
+        max-width: none;
+        height: 153px;
+        width: 800px;
+        position: absolute;
+        left: 50%;
+        /* Half image width */
+        margin-left: -400px;
+        overflow: hidden;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .top-content, .bottom-content {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .middle-content h2 {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .boxes {
+        flex-direction: column;
+    }
+
+    .box {
+        align-self: center;
+        margin: 0;
+        box-sizing: content-box;
+        padding: 40px;
+    }
+}
+/* Box Colors */
+
+#box1 {
+    background: teal;
+}
+
+#box2 {
+    background: gold;
+}
+
+#box3 {
+    background: cadetblue;
+}
+
+#box4 {
+    background: coral;
+}
+
+#box5 {
+    background: crimson;
+}
+
+#box6 {
+    background: forestgreen;
+}
+
+#box7 {
+    background: darkorchid;
+}
+
+#box8 {
+    background: hotpink;
+}
+
+#box9 {
+    background: indigo;
+}
+
+#box10 {
+    background: dodgerblue;
 }
