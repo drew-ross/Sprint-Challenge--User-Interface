@@ -248,6 +248,16 @@ footer nav a {
         font-size: 1.1rem;
     }
 
+    .jumboImg {
+        overflow: hidden;
+    }
+
+    .jumboImg img {
+        height: 153px;
+        max-width: none;
+        margin-left: -50%;
+    }
+
     .container {
         width: 100%;
     }
